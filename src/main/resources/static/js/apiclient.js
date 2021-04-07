@@ -1,5 +1,4 @@
 /* global axios, google */
-
 var apiclient = (function () {
 
     function firstPage(){

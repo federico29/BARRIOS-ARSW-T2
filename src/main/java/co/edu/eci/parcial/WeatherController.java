@@ -9,7 +9,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-
+/**
+ * Controlador de la aplicación, crea los endpoints que atenderán las peticiones
+ * @author Federico Barrios Meneses
+ */
 @RestController
 @RequestMapping(value = "/weather")
 public class WeatherController {
@@ -17,6 +20,12 @@ public class WeatherController {
     @Autowired
     private WeatherServices service;
 
+    /**
+     * Petición get que se realiza a los servicios, devuelve la información del 
+     * clima de una ciudad
+     * @param ciudad ciudad que se consulta
+     * @return información del clima de la ciudad
+     */
     @RequestMapping(value = "/{ciudad}", method = RequestMethod.GET)
     public ResponseEntity<?> get(@PathVariable("ciudad") String ciudad) {
         try {
