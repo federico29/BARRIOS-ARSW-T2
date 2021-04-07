@@ -4,10 +4,6 @@ Realizado por Federico Barrios Meneses.
 ## Diseño de arquitectura
 ![](images/arquitectura.png)
 
-## Funcionamiento de la aplicación
-Se debe ingresar el nombre de la ciudad en el campo de texto y luego oprimir el botón search:
-![](images/funcionamiento.png)
-
 ## Ejecución local de la aplicación
 Para ejecutar localmente el programa debe clonar el repocitorio de GitHub con el siguiente comando:
 ```
@@ -31,5 +27,9 @@ Dentro de la aplicación pueden extenderse varias funcionalidades, por ejemplo, 
 Url: https://barrios-arsw-t2.herokuapp.com/
 ## URL GitHub
 Url: https://github.com/federico29/BARRIOS-ARSW-T2
+
+## Funcionamiento de la aplicación
+Se debe ingresar el nombre de la ciudad en el campo de texto y luego oprimir el botón search:
+![](images/funcionamiento.png)
 
 
