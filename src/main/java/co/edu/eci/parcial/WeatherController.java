@@ -1,5 +1,6 @@
 package co.edu.eci.parcial;
 
+import com.mashape.unirest.http.exceptions.UnirestException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -10,17 +11,17 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-@RequestMapping(value = "/path")
-public class Controlador {
+@RequestMapping(value = "/weather")
+public class WeatherController {
 
     @Autowired
-    private Cliente cliente;
+    private WeatherServices service;
 
     @RequestMapping(value = "/{ciudad}", method = RequestMethod.GET)
     public ResponseEntity<?> get(@PathVariable("ciudad") String ciudad) {
         try {
-            return new ResponseEntity<>(cliente.metodo(ciudad).toString(), HttpStatus.ACCEPTED);
-        } catch (Exception ex) {
+            return new ResponseEntity<>(service.getCityWeather(ciudad), HttpStatus.ACCEPTED);
+        } catch (UnirestException ex) {
             return new ResponseEntity<>(ex.getMessage(), HttpStatus.BAD_REQUEST);
         }
     }

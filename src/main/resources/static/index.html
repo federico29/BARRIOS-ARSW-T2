@@ -8,10 +8,34 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"><!-- Bootstrap -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script><!-- Bootstrap -->
         <script type="text/javascript" src="js/apiclient.js" ></script><!-- Mi js -->
+        <script
+            src="https://maps.googleapis.com/maps/api/js?
+            key=AIzaSyAlGl_JpjPK9qx8ZosvnTzPBmbEqOxltQU&
+            map_ids=f2eab58da57af0cd&callback=apiclient.initMap">
+        </script>
+        <style>
+            #map {
+                height: 50vh;
+                margin-top: 25px;
+            }
+        </style>
     </head>
     <body>
         <div class="container">
-            <h1>Titulo</h1>
+            <h1>Global Weather</h1>
+            <div class="container">
+                <div class="col-xs-3">
+                    <input type="text" id="city" required placeholder="Type the city name">
+                </div>
+                <div class="col-xs-3">
+                    <button type="button" id="submit" onclick="apiclient.weatherByCity()">Search</button>
+                </div>
+            </div>
+            
+            <div class="container">
+                <div id="map">
+                </div>
+            </div>
         </div>
     </body>
 </html>
