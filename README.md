@@ -26,9 +26,9 @@ mvn spring-boot:run
 ## ¿Cómo se puede extender la aplicación?
 Dentro de la aplicación pueden extenderse varias funcionalidades, por ejemplo, se puede crear un menu que permita elegir las unidades con las que se quiere visualizar la información, cambiando de unidades métricas a unidades imperiales, etc.
 ## URL Heroku
-[![Deployed to Heroku](https://www.herokucdn.com/deploy/button.png)](https://federico-barrios-arsw-t2.herokuapp.com/)
+[![Deployed to Heroku](https://www.herokucdn.com/deploy/button.png)](https://barrios-arsw-t2.herokuapp.com/)
 
-Url: https://federico-barrios-arsw-t2.herokuapp.com/
+Url: https://barrios-arsw-t2.herokuapp.com/
 ## URL GitHub
 Url: https://github.com/federico29/BARRIOS-ARSW-T2
 
