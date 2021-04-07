@@ -18,20 +18,62 @@
                 height: 50vh;
                 margin-top: 25px;
             }
+            #cityname {
+                text-align: center;
+            }
+            #temperature {
+                font-size: 500%;
+                text-align: center;
+            }
+            #main {
+                font-size: 300%;
+                text-align: center;
+            }
+            th, td {
+                text-align: center;
+            }
         </style>
     </head>
-    <body>
+    <body onload="apiclient.firstPage()">
         <div class="container">
             <h1>Global Weather</h1>
             <div class="container">
-                <div class="col-xs-3">
-                    <input type="text" id="city" required placeholder="Type the city name">
+                <div class="col-xs-2">
+                    <input type="text" id="city" required placeholder="Type the city">
                 </div>
-                <div class="col-xs-3">
+                <div class="col-xs-2">
                     <button type="button" id="submit" onclick="apiclient.weatherByCity()">Search</button>
                 </div>
             </div>
-            
+            <div class="container" id="general">
+                <div class="row"><h2 id="cityname"></h2></div>
+                <div class="row"><p id="temperature"></p></div>
+                <div class="row"><p id="main"></p></div>
+            </div>
+            <div class="container" id="specific">
+                <div class="row">
+                    <table id="table1" class="table table-fixed">
+                        <thead>
+                            <tr>
+                                <th class='col-xs-2'>Feels Like</th>
+                                <th class='col-xs-2'>Wind Speed</th>
+                                <th class='col-xs-2'>Visibility</th>
+                                <th class='col-xs-2'>Humidity</th>
+                                <th class='col-xs-2'>Pressure</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tablebody">
+                            <tr>
+                                <td class='col-xs-2' id="feelslike"></td>
+                                <td class='col-xs-2' id="windspeed"></td>
+                                <td class='col-xs-2' id="visibility"></td>
+                                <td class='col-xs-2' id="humidity"></td>
+                                <td class='col-xs-2' id="pressure"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
             <div class="container">
                 <div id="map">
                 </div>
