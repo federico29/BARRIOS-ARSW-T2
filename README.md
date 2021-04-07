@@ -30,6 +30,6 @@ Dentro de la aplicación pueden extenderse varias funcionalidades, por ejemplo, 
 
 Url: https://federico-barrios-arsw-t2.herokuapp.com/
 ## URL GitHub
-Url: https://github.com/federico29/federico-barrios-arsw-t2
+Url: https://github.com/federico29/BARRIOS-ARSW-T2
 
 
