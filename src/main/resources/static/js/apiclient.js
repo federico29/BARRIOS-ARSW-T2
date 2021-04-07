@@ -6,11 +6,9 @@ var apiclient = (function () {
         var city = document.getElementById("city").value;
         const options = {
             method: 'GET',
-            url: 'http://localhost:8080/weather/' + city
+            url: window.location.href + '/weather/' + city
         };
         axios.request(options).then(function (response) {
-            //console.log("Lat: " + response.data.coord.lat);
-            //console.log("Lon: " + response.data.coord.lon);
             initMap(response.data.coord.lat, response.data.coord.lon);
         }).catch(function (error) {
             console.error(error);
